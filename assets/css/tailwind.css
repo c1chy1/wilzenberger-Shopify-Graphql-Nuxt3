@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+
+    body {
+
+        @apply font-sans
+
+    }
+
+    h1 {
+        @apply pb-4 text-lg xl:text-5xl font-bold text-center
+    }
+    h2 {
+        @apply pb-4 text-2xl md:text-base xl:text-3xl font-bold text-center
+    }
+
+
+}
+
+@layer components {
+
+    #product-description li strong {
+
+        font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+
+    #product-description li:nth-child(1)  {
+
+
+        padding-top: 0;
+
+    }
+
+    #product-description li  {
+
+        font-size: 0.9rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #weihrauch-extrakt {
+
+        color: #8BA039;
+        font-weight: 600;
+    }
+
+    .border-light-gray {
+
+
+        @apply border border-tertiary border-opacity-20
+
+    }
+
+    #product-grid section {
+     @apply  grid-cols-1 md:grid-cols-3
+    }
+
+    #product-grid section article img {
+        @apply   md:w-2/3
+    }
+
+
+
+
+
+}
+
+@layer
+{
+
+    @font-face {
+        font-family: 'Calibri';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('assets/fonts/Calibri.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Calibri Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('assets/fonts/Calibri-Bold.woff2') format('woff2');
+    }
+
+
+}
