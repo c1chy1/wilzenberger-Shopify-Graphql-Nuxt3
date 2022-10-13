@@ -18,7 +18,7 @@
 
 
       <li id="nav" :key="item.label" v-for="item of ids">
-        <NuxtLink  class=" transition-all hover:text-tertiary   " :to="item.route">{{ item.label }}
+        <NuxtLink  class=" transition-all hover:text-tertiary" :to="item.route">{{ item.label }}
         </NuxtLink>
       </li>
 
@@ -56,9 +56,7 @@ const props = defineProps<Props>()
 .logo .router-link-active:before {
 
   width: 0;
-
 }
-
 #nav  {
   position: relative;
 }
@@ -74,7 +72,6 @@ const props = defineProps<Props>()
   background: #828282;
   transition: all 0.5s ease-out;
 
-
 }
 
 #nav:hover:before {
@@ -87,7 +84,6 @@ const props = defineProps<Props>()
 
   transition: all 0.3s ease-out;
 }
-
 
 
 </style>

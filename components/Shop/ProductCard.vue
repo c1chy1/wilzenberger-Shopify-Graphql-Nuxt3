@@ -68,8 +68,4 @@ const height = props.product?.images?.edges[0]?.node?.height ?? "";
 const sizes = `(max-width: ${breakpointsTailwind.md}px) 45vw, 100%`;
 const srcset = getSrcset(src);
 
-
-
-
-
 </script>

@@ -152,15 +152,7 @@ watch(quantity, (newValue, oldValue) => {
 
 <style scoped>
 
-.cookiesContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  color: #000;
-  text-align: center;
-  border-radius: 20px;
-  padding: 30px 30px 70px;}
+
 button.close {
   width: 30px;
   font-size: 20px;
