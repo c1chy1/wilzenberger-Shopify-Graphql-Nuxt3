@@ -26,7 +26,7 @@
         :index="index"
         :key="product.node.title"
         :product="product.node"
-        class="absolute  right-14 top-0"/>
+        class="absolute  right-14 top-0 z-50"/>
     </div>
 
     <div v-else></div>

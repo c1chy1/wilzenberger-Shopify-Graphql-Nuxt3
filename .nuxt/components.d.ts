@@ -44,6 +44,8 @@ declare module '@vue/runtime-core' {
     'ServerPlaceholder': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
     'NuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'NuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'NuxtImg': typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-img")['default']
+    'NuxtPicture': typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-picture")['default']
     'LazyBasicButton': typeof import("../components/Basic/Button.vue")['default']
     'LazyBasicModal': typeof import("../components/Basic/Modal.vue")['default']
     'LazyBasicNavLink': typeof import("../components/Basic/NavLink.vue")['default']
@@ -87,6 +89,8 @@ declare module '@vue/runtime-core' {
     'LazyServerPlaceholder': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
     'LazyNuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'LazyNuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'LazyNuxtImg': typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-img")['default']
+    'LazyNuxtPicture': typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-picture")['default']
   }
 }
 
@@ -133,6 +137,8 @@ export const ClientOnly: typeof import("../node_modules/nuxt/dist/app/components
 export const ServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const NuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+export const NuxtImg: typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-img")['default']
+export const NuxtPicture: typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-picture")['default']
 export const LazyBasicButton: typeof import("../components/Basic/Button.vue")['default']
 export const LazyBasicModal: typeof import("../components/Basic/Modal.vue")['default']
 export const LazyBasicNavLink: typeof import("../components/Basic/NavLink.vue")['default']
@@ -176,5 +182,7 @@ export const LazyClientOnly: typeof import("../node_modules/nuxt/dist/app/compon
 export const LazyServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const LazyNuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const LazyNuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+export const LazyNuxtImg: typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-img")['default']
+export const LazyNuxtPicture: typeof import("../node_modules/@nuxt/image-edge/dist/runtime/components/nuxt-picture")['default']
 
 export const componentNames: string[]

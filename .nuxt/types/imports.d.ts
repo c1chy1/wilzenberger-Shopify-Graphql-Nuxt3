@@ -189,7 +189,7 @@ declare global {
   const useGeolocation: typeof import('@vueuse/core')['useGeolocation']
   const useHead: typeof import('../../node_modules/nuxt/dist/head/runtime')['useHead']
   const useIdle: typeof import('@vueuse/core')['useIdle']
-  const useImage: typeof import('@vueuse/core')['useImage']
+  const useImage: typeof import('../../node_modules/@nuxt/image-edge/dist/runtime/composables')['useImage']
   const useInfiniteScroll: typeof import('@vueuse/core')['useInfiniteScroll']
   const useIntersectionObserver: typeof import('@vueuse/core')['useIntersectionObserver']
   const useInterval: typeof import('@vueuse/core')['useInterval']
@@ -496,7 +496,7 @@ declare module '@vue/runtime-core' {
     readonly useGeolocation: UnwrapRef<typeof import('@vueuse/core')['useGeolocation']>
     readonly useHead: UnwrapRef<typeof import('../../node_modules/nuxt/dist/head/runtime')['useHead']>
     readonly useIdle: UnwrapRef<typeof import('@vueuse/core')['useIdle']>
-    readonly useImage: UnwrapRef<typeof import('@vueuse/core')['useImage']>
+    readonly useImage: UnwrapRef<typeof import('../../node_modules/@nuxt/image-edge/dist/runtime/composables')['useImage']>
     readonly useInfiniteScroll: UnwrapRef<typeof import('@vueuse/core')['useInfiniteScroll']>
     readonly useIntersectionObserver: UnwrapRef<typeof import('@vueuse/core')['useIntersectionObserver']>
     readonly useInterval: UnwrapRef<typeof import('@vueuse/core')['useInterval']>

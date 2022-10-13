@@ -64,6 +64,12 @@
       "pinia": [
         "node_modules/pinia/dist/pinia"
       ],
+      "#image": [
+        "node_modules/@nuxt/image-edge/dist/runtime"
+      ],
+      "#image/*": [
+        "node_modules/@nuxt/image-edge/dist/runtime/*"
+      ],
       "#head": [
         "node_modules/nuxt/dist/head/runtime"
       ],

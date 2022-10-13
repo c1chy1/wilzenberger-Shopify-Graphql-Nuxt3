@@ -1,27 +1,12 @@
 <template>
 
   <header
-      class="w-full min-h-screen bg-cover bg-center flex"
-      :style="`background-image: url(${props.bgImage});` "
-    >
+      class="w-full min-h-screen bg-cover bg-center flex items-center">
+<nuxt-img format="webp" src="/images/home_wilzenberger-bg-header.png"></nuxt-img>
 
-
-<div class=" pb-10 lg:pb-20 xl:pb-40 m-auto container">
+<div class=" mb-20 w-full absolute">
 <slot></slot>
 </div>
   </header>
 
 </template>
-
-
-
-<script setup lang="ts">
-
-interface Props {
-  bgImage: string;
-
-}
-
-const props = defineProps<Props>()
-
-</script>

@@ -4,6 +4,7 @@ declare module 'nitropack' {
   interface InternalApi {
     '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
     '/manifest.json': Awaited<ReturnType<typeof import('../../node_modules/@kevinmarrec/nuxt-pwa/dist/runtime/server/manifest').default>>
+    '/_ipx/**': Awaited<ReturnType<typeof import('../../node_modules/@nuxt/image-edge/dist/runtime/ipx').default>>
   }
 }
 declare global {

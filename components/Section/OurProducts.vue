@@ -12,9 +12,10 @@
         <hr class="text-secondary text-opacity-40  border-dashed divide-y">
       </div>
 
-      <img
+      <nuxt-img
           class="mx-5"
-          src="/images/home_wilzenberger-icon-flower.png" alt="flower">
+          format="webp"
+          src="/images/home_wilzenberger-icon-flower.png" alt="flower"/>
       <div class="flex flex-col w-1/2">
         <hr class=" text-secondary text-opacity-40  border-dashed divide-y">
         <p class="uppercase py-2 font-semibold xl:text-xl text-left">Erlebe die Wirkung</p>
@@ -76,8 +77,7 @@
           <li class="mb-4">
             <article class="flex flex-row-reverse items-center px-1">
               <IconBasic image-link="public/icons/gen.png"
-                         alt="Ohne Gentechnik"
-              />
+                         alt="Ohne Gentechnik"/>
 
               <h4 class="mr-2 xl:mr-4 text-sm xl:text-xl uppercase font-semibold">Ohne Gentechnik</h4>
             </article>

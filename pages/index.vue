@@ -5,6 +5,8 @@
         title="Wilzenberger"
         description="Wilzenberger"/>
     <LayoutHeader
+
+
         bg-image="/images/home_wilzenberger-bg-header.png"
 
     >
@@ -23,7 +25,7 @@
         aus dem Sauerland!</h2>
 
       <img class="mx-auto my-2" src="/images/home_wilzenberger-line-about.png" alt="about">
-      <p class=" p-4 text-center w-10/12  text-secondary text-xs md:text-sm xl:text-base  xl:w-2/3  leading-tight mx-auto ">
+      <p class=" p-4 text-center w-10/12  text-secondary text-xs md:text-sm xl:text-base  xl:w-1/2  leading-tight mx-auto ">
         Lorem ipsum dolor sit amet, consetetur
         sadipscining.Lorem ipsum dolor sit amet, consetetur sadipscining.Lorem ipsum dolor sit amet, consetetur
         sadipscining.Lorem ipsum dolor sit amet, consetetur sadipscining.Lorem ipsum dolor sit amet, consetetur

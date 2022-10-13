@@ -65,7 +65,7 @@ const props = defineProps<Props>()
 #nav:before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -11px;
   left: 0;
   width: 0;
   height:2px;
