@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="w-full flex md:flex relative bg-[length:100%_100%] bg-[right]"
+  <nav class="w-full flex md:flex relative bg-[length:100%_100%] bg-[right] z-50"
        :style="`background-image: url(${props.bgImage});`"
   >
     <ul

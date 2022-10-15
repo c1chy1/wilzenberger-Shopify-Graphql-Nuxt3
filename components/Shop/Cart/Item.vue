@@ -45,12 +45,15 @@
         <Teleport to="body">
           <transition name="modal-fade">
             <div v-if="show" class="modal-overlay z-30">
-              <div v-if="show" class="modal px-4" >
+              <div v-if="show" class="modal p-4 bg-tertiary bg-opacity-25" >
 
               <div class="cookiesContent" id="cookiesPopup">
-                <button @click="show = false" class="close">✖</button>
-                <img src="public/icon.png" alt="logo" class="w-32 h-32"/>
-                <p class="py-2">Sind Sie sicher Artikel aus dem Warenkorb löschen ?</p>
+                <div class="flex justify-between">
+                  <nuxt-img format="webp" src="icon.png" alt="logo" class="xl:w-32 xl:h-32"/>
+                <button @click="show = false" class="close hover:text-primary transition-all text-white">✖</button>
+
+                </div>
+                <p class="py-4 text-white">Sind Sie sicher Artikel aus dem Warenkorb löschen ?</p>
 
                 <BasicButton
                     @click="closeModal"
@@ -156,8 +159,7 @@ watch(quantity, (newValue, oldValue) => {
 button.close {
   width: 30px;
   font-size: 20px;
-  color: #c0c5cb;
-  align-self: flex-end;
+  align-self: flex-start;
   background-color: transparent;
   border: none;
   margin-bottom: 10px;

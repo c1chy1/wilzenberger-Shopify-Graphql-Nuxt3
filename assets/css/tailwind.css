@@ -13,16 +13,35 @@
     }
 
     h1 {
-        @apply pb-4 text-lg xl:text-5xl font-bold text-center
+        @apply pb-4 md:text-lg xl:text-5xl font-bold text-center
     }
     h2 {
         @apply pb-4 text-2xl md:text-base xl:text-3xl font-bold text-center
     }
-
+    h3 {
+        @apply pb-4 text-lg xl:text-xl font-bold text-center
+    }
+    h4 {
+        @apply pb-4 text-sm  xl:text-lg font-bold text-center
+    }
 
 }
 
 @layer components {
+
+
+    .constrainer {
+        @apply w-full block mx-auto px-7 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl ;
+    }
+
+    .constrainer-md {
+        @apply w-full block mx-auto px-7 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl;
+    }
+
+    .constrainer-sm {
+        @apply w-full block mx-auto px-7 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg;
+    }
+
 
     #product-description li strong {
 

@@ -24,7 +24,7 @@
 
         v-for="(product, index) in collection.edges"
         :index="index"
-        :key="product.node.title"
+        :key="product.node.handle"
         :product="product.node"
         class="absolute  right-14 top-0 z-50"/>
     </div>

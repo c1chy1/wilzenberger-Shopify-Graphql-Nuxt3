@@ -1,3 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+
 module.exports = {
   content: [
       './components/**/*.{vue, js, jsx, ts, tsx}',
@@ -8,7 +11,7 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      sans: ['"Calibri"', 'sans-serif'],
+      sans: ['"Calibri"', ...defaultTheme.fontFamily.sans],
       serif: ['"Calibri"', 'serif'],
     },
 

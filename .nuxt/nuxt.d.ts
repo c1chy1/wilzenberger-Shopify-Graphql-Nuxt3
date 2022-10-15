@@ -2,7 +2,6 @@
 /// <reference types="@pinia/nuxt" />
 /// <reference types="@vueuse/nuxt" />
 /// <reference types="@nuxtjs/tailwindcss" />
-/// <reference types="@averjs/nuxt-compression" />
 /// <reference types="@kevinmarrec/nuxt-pwa" />
 /// <reference types="@nuxt/image-edge" />
 /// <reference types="@nuxt/telemetry" />

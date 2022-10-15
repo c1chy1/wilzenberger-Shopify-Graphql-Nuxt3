@@ -12,7 +12,6 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/router").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/image-edge/dist/runtime/plugin").default> &
   InjectionType<typeof import("../../node_modules/@pinia/nuxt/dist/runtime/plugin.vue3").default> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/payload.client").default> &
   InjectionType<typeof import("../../plugins/apollo").default> &
   InjectionType<typeof import("../../plugins/scrollToTop").default>
 
