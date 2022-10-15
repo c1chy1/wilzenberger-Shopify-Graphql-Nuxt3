@@ -4,7 +4,7 @@
     <transition-group name="slide" :duration="500" mode="in-out">
       <div key="cart" id="cart" v-show="cartStore.cartOpen"
 
-           class="transition-all xl:pl-6 fixed w-full sm:w-2/3 lg:w-1/3  2xl:w-1/4 top-0 bottom-0 right-0 z-10  bg-white overflow-y-scroll"
+           class="transition-all xl:pl-6 fixed w-full sm:w-2/3 lg:w-1/3  2xl:w-1/4 top-0 bottom-0 right-0 bg-white overflow-y-scroll z-30"
            ref="cart">
         <ShopCartHeader key="2"
         />

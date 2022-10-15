@@ -3,7 +3,7 @@
     Open Modal
   </button>
   <Teleport to="body">
-    <div v-if="open" class="modal-overlay z-30">
+    <div v-if="open" class="modal-overlay z-50">
     <div v-if="open" class="modal">
       <p>Hello from the modal!</p>
       <button @click="open = false">

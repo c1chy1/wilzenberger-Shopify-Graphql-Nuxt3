@@ -2,7 +2,7 @@
   <div
 
       id="preloader"
-      class="fixed min-h-screen w-full bg-[#8DA23C] z-40">
+      class="fixed min-h-screen w-full bg-[#8DA23C] z-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto my-auto wilzen hidden lg:block"
          width="512" height="512">
       <path style="fill:#8da23c; stroke:none;"

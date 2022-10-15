@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed text-2xl text-center h-full  md:text-xl lg:text-2xl list-none text-white z-30">
+  <nav class="fixed text-2xl text-center h-full  md:text-xl lg:text-2xl list-none text-white z-20">
 
 
     <div class="top-right-slide  fixed">

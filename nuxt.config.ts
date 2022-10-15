@@ -3,19 +3,26 @@ import {defineNuxtConfig} from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    /*    target: 'static',
-        mode: "universal",*/
+        target: 'static',
+        mode: "universal",
     ssr: false,
     pwa: {
         workbox: {
             enabled: true,
 
         },
+        manifest: {
+            name: 'Wilzenberger',
+            lang: 'de',
+            display: 'standalone',
+            description: "Wilzenberger Nahrungsergänzungsmittel",
+            theme_color: "#8BA039",
+            background_color: "#8BA039"
+        }
+
     },
     css: ['~/assets/css/main.css'],
     build: {
-
-
         postcss: {
             postcssOptions: require('./postcss.config.js'),
         },
@@ -39,15 +46,6 @@ export default defineNuxtConfig({
         source: 'public/icon.png',
     },
 
-    manifest: {
-        display: 'standalone',
-        name: 'Wilzenberger App',
-        description: "Wilzenberger Nahrungsergänzungsmittel",
-        lang: 'de',
-        theme_color: "#8BA039",
-        background_color: "#8BA039"
-
-    },
 
 
     meta: {

@@ -18,25 +18,25 @@
 
         <IconBasic
             class="inline-block pr-1 xl:pr-2 w-1/6 "
-            image-link="public/icons/icon-footer-airplane.png"
+            image-link="/public/icons/icon-footer-airplane.png"
                    alt="airplane"/>
         Adressdaten...</li>
       <li>
         <IconBasic
             class="inline-block pr-1 xl:pr-2 w-1/6 "
-            image-link="public/icons/icon-footer-mail.png"
+            image-link="/public/icons/icon-footer-mail.png"
             alt="mail"/>
         Mail...</li>
       <li>
         <IconBasic
             class="inline-block pr-1 xl:pr-2 w-1/6 "
-            image-link="public/icons/icon-footer-phone.png"
+            image-link="/public/icons/icon-footer-phone.png"
             alt="phone"/>
        Tel...</li>
       <li>
         <IconBasic
             class="inline-block pr-1 xl:pr-2 w-1/6 "
-            image-link="public/icons/icon-footer-globe.png"
+            image-link="/public/icons/icon-footer-globe.png"
             alt="globe"/>www...</li>
     </ul>
 
@@ -62,13 +62,13 @@
 
           <IconBasic
               class="w-12 h-6 mt-2 mr-2 w-1/2"
-              image-link="public/icons/Paypal.png"
+              image-link="/public/icons/Paypal.png"
               alt="paypal"/>
 
 
           <IconBasic
               class="w-12 h-6 mt-2 mr-2 w-1/2"
-              image-link="public/icons/MasterCard_logo.png"
+              image-link="/public/icons/MasterCard_logo.png"
               alt="master card"/>
 
         </div>
@@ -78,12 +78,12 @@
         <div class="flex">
           <IconBasic
               class="w-12 h-6 mt-2 mr-2 w-1/2"
-              image-link="public/icons/dhl_logo2.png"
+              image-link="/public/icons/dhl_logo2.png"
               alt="dhl"/>
 
           <IconBasic
               class="w-12 h-6 mt-2 mr-2 w-1/2"
-              image-link="/icons/Hermes.jpg"
+              image-link="/public/icons/Hermes.jpg"
               alt="hermes"/>
         </div>
       </li>

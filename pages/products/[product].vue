@@ -43,7 +43,7 @@
           />
 
 
-          <div class="ml-12 xl:ml-0">
+          <div class=" xl:ml-0">
             <ShopProductTitle
                 tag="h2"
                 :title="product.title"
@@ -97,7 +97,7 @@
             id="product-grid"
             :num-products="3"
             bg-image="/images/home_wilzenberger-products-bg-gray.png"
-            class="text-center text-tertiary pt-12"
+            class="text-center text-tertiary pt-12 pb-12"
         >
           <h3 class="uppercase mx-auto w-10/12 xl:w-full xl:text-xl leading-none font-semibold">Diese produkte könnten
             Ihnen auch gefallen</h3>
