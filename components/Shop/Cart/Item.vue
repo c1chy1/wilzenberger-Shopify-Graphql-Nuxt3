@@ -44,7 +44,7 @@
         <Icon @click="show = true" icon="uil:times" class="w-6 h-6"/>
         <Teleport to="body">
           <transition name="modal-fade">
-            <div v-if="show" class="modal-overlay z-30">
+            <div v-if="show" class="modal-overlay z-50">
               <div v-if="show" class="modal p-4 bg-tertiary bg-opacity-25" >
 
               <div class="cookiesContent" id="cookiesPopup">

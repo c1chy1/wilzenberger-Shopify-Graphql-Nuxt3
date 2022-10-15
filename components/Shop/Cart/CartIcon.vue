@@ -1,6 +1,6 @@
 <template>
   <button
-      class="fixed flex items-center justify-end right-5 bottom-5 z-40"
+      class="fixed flex items-center justify-end right-5 bottom-5 z-[45]"
       aria-label="Cart"
       @click="handleClick"
       @keyup.enter="handleClick"
