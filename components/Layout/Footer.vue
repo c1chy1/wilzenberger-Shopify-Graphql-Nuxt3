@@ -1,7 +1,7 @@
 <template>
 <footer
 
-     class="bg-no-repeat text-white"
+     class="bg-no-repeat text-white bg-cover"
     :style="`background-image: url(${props.bgImage});`">
 
   <div class="xl:w-2/3 grid grid-cols-4 xl:p-4 items-center justify-items-center mx-auto divide-x-2">

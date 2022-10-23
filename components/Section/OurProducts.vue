@@ -1,7 +1,7 @@
 <template>
 
   <section
-      class="w-full    xl:bg-no-repeat  text-white text-center"
+      class="w-full    xl:bg-no-repeat  text-white text-center bg-cover"
       :style="`background-image: url(${props.bgImage});`">
 
     <h3 class="uppercase  text-3xl xl:text-5xl font-semibold  pt-4 xl:pt-12">Unsere Produkte</h3>

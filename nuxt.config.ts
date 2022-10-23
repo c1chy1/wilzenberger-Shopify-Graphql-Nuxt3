@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
 
 
-    modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge'],
+    modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge',],
     buildModules: ['@pinia/nuxt', '@vueuse/nuxt', "@nuxtjs/tailwindcss"],
     plugins: ['plugins/apollo', 'plugins/scrollToTop'],
 
@@ -62,7 +62,10 @@ export default defineNuxtConfig({
         ]
     },
     gsap: {
-        /* Module Options */
+        extraPlugins: {
+            scrollTrigger: true,
+            DrawSVGPlugin: true,
+        },
     },
 
 
