@@ -14,11 +14,11 @@
         <br> consetetur sadipscining.</p>
     </LayoutHeader>
 
-    <AnimationSun/>
+
     <SectionAbout
         bg-image="/images/home_wilzenberger-bg-about.png">
 
-
+      <AnimationSun/>
 
       <h2 class=" font-serif   text-center text-3xl md:text-4xl  xl:text-6xl text-tertiary w-full font-bold  leading-none ">
         Das Beste
@@ -37,6 +37,7 @@
         bg-image="/images/home_wilzenberger-products-bg.png"/>
 
     <ShopFeaturedProducts
+        class="z-50"
         :num-products="4"
         bg-image=""
         :number="4"

@@ -2,6 +2,7 @@
 
   <div v-if="collection.edges"
        :style="`background-image: url(${props.bgImage});`"
+       class="  mt-8 sm:mt-12 xl:mt-20"
   >
 
     <slot></slot>
