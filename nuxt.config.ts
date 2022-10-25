@@ -3,8 +3,8 @@ import {defineNuxtConfig} from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-        target: 'static',
-        mode: "universal",
+/*        target: 'static',
+        mode: "universal",*/
     ssr: false,
     pwa: {
         workbox: {
@@ -36,9 +36,9 @@ export default defineNuxtConfig({
 
 
 
-    modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge',],
-    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss','@aceforth/nuxt-optimized-images'],
-    plugins: ['plugins/apollo', 'plugins/scrollToTop'],
+    modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge'],
+    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss' ],
+    plugins: ['plugins/apollo', 'plugins/scrollToTop', 'plugins/lightGallery'],
 
 
     icon: {

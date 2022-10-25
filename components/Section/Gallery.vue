@@ -1,22 +1,18 @@
 <template>
 
-  <lightgallery id="lightgallery"
+  <lightgallery
                 :settings="{
     mobileSettings:{controls: true, showCloseIcon: true, download: true},
     toggleThumb: true,
     allowMediaOverlap: true,
     selector: '.image',
-    speed: 500,
     plugins: plugins,
-    subHtmlSelectorRelative: true,
     mode: 'lg-slide',
     cssEasing: 'ease',
     easing: 'linear',
     speed: 600,
     height: '100%',
     width: '100%',
-    addClass: '',
-    startClass: 'lg-start-zoom',
     backdropDuration: 150,
     hideBarsDelay: 6000,
     useLeft: false,
@@ -53,7 +49,7 @@
   >
     <div id="lightgallery" class="grid grid-rows-1 grid-cols-4 gap-2 w-full ">
       <a
-          v-for="(image , index) in product.images.edges "
+          v-for="(image , index) in images "
           :key="product.handle"
           :id="index"
           class="my-auto  hover:border hover:border-primary hover:transition-all hover:bg-primary hover:bg-opacity-70"
@@ -84,11 +80,11 @@ import "lightgallery/scss/lg-zoom.scss";
 import "lightgallery/scss/lg-fullscreen.scss";
 import {productByHandle} from "~/apollo/queries/productByHandle";
 
-
 const plugins = [lgZoom, lgFullscreen]
 
 const route = useRoute();
 const handle = route.params.product;
+
 
 
 const {result, loading, error} = useQuery(productByHandle, {
@@ -97,6 +93,11 @@ const {result, loading, error} = useQuery(productByHandle, {
 
 const product = computed(() => result.value?.productByHandle ?? [])
 
+
+
+const images = computed(() => result.value?.productByHandle.images.edges ?? [])
+
+console.log(images.value)
 </script>
 
 <style scoped lang="scss">
