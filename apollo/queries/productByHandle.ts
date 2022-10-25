@@ -18,7 +18,15 @@ export const productByHandle = gql`
                     currencyCode
                 }
             }
-
+        
+            
+            featuredImage {
+                
+             url
+                
+            }
+            
+            
             priceRange {
                 minVariantPrice {
                     amount

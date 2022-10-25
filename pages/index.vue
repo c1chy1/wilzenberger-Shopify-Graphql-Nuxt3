@@ -15,8 +15,7 @@
     </LayoutHeader>
 
 
-    <SectionAbout
-        bg-image="/images/home_wilzenberger-bg-about.png">
+    <SectionAbout>
 
       <AnimationSun/>
 

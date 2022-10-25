@@ -30,6 +30,7 @@
     "graphql": "^16.5.0",
     "graphql-tag": "^2.12.6",
     "gsap": "npm:@gsap/business@^3.11.1",
+    "lightgallery": "^2.7.0",
     "uuid": "^8.3.2"
   }
 }

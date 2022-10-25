@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         }
 
     },
-    css: ['~/assets/css/main.css'],
+    css: ['~/assets/css/main.css','lightgallery/css/lightgallery.css'],
     build: {
         postcss: {
             postcssOptions: require('./postcss.config.js'),
@@ -36,9 +36,8 @@ export default defineNuxtConfig({
 
 
 
-
     modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge',],
-    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', "@nuxtjs/tailwindcss"],
+    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss','@aceforth/nuxt-optimized-images'],
     plugins: ['plugins/apollo', 'plugins/scrollToTop'],
 
 

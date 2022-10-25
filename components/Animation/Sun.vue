@@ -1,6 +1,6 @@
 <template>
   <div class="absolute w-full h-full hidden lg:block " >
-    <svg id="svg" class="m-auto lg:h-[83rem] " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 620 550">
+    <svg id="svg" class="m-auto lg:h-[83rem] w-full" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 620 550">
       <path class="theLine opacity-20"
             d="M 0 0
             C 200 150 950 50 350 150

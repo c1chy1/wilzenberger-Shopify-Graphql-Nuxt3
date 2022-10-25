@@ -164,6 +164,7 @@ export interface Product {
   description: string
   descriptionHtml: string
   featuredImage: Image
+  featuredMedia: Media
   handle: string
   id: string
   metafield: Metafield
@@ -201,4 +202,37 @@ export interface CartLineUpdateInput {
   merchandiseId?: string
   quantity?: number
   sellingPlanId?: string
+}
+
+export interface Image<Type extends string = 'image'> {
+  url: Type extends 'image' ? string : undefined
+  thumbnail: Type extends 'thumbnail' ? string : undefined
+  id: string
+  width: number
+  height: number
+  altText: string
+}
+
+
+export interface ProductPriceRange {
+  maxVariantPrice: MoneyV2
+  minVariantPrice: MoneyV2
+}
+
+export interface Media {
+
+  preview:  MediaPreviewImage
+}
+export interface  MediaPreviewImage {
+
+  image: Image
+}
+export interface ImageConnection {
+  edges: ImageEdge[]
+  pageInfo: PageInfo
+}
+
+export interface ImageEdge {
+  cursor: string
+  node: Image
 }

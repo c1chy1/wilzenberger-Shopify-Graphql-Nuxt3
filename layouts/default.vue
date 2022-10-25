@@ -3,7 +3,7 @@
 
 
 <section class="min-h-screen overflow-hidden">
-<!--  <SectionPreloader/>-->
+  <SectionPreloader/>
 
   <ShopCartIcon/>
   <transition-group name="cart" mode="out-in">

@@ -10,7 +10,7 @@ export const products = gql`
             edges {
                 node {
                     id
-                    images(first: 2) {
+                    images(first: 5) {
                         edges {
                             node {
                                 src

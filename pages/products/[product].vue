@@ -31,7 +31,7 @@
           </p>
         </div>
         <section
-            class="container mb-24 grid grid-cols-1 xl:gap-10 md:grid-cols-2 px-4 mt-4 md:w-5/6 xl:max-w-6xl mx-auto">
+            class="container xl:mb-24 gap-x-6 grid grid-cols-1 xl:gap-10 md:grid-cols-2 px-4 mt-4 md:w-5/6 xl:max-w-6xl mx-auto">
 
           <ShopProductImage
               :alt="product.handle"
@@ -84,7 +84,11 @@
             </div>
 
           </div>
-
+          <client-only>
+          <SectionGallery
+              :gallery="product"
+          />
+          </client-only>
         </section>
         <section class="flex flex-col mt-12 xl:flex-row px-4 mt-4 md:w-5/6 xl:max-w-6xl mx-auto">
           <SectionTabs/>
@@ -107,6 +111,7 @@
         </ShopFeaturedProducts>
 
 
+
       </template>
     </template>
 
@@ -122,6 +127,7 @@ import {productByHandle} from "~/apollo/queries/productByHandle";
 import {breakpointsTailwind} from "@vueuse/core";
 import {getSrcset} from "~/utilities/images";
 
+
 const route = useRoute();
 const handle = route.params.product;
 
@@ -130,7 +136,7 @@ const {result, loading, error} = useQuery(productByHandle, {handle});
 const product = computed(() => result.value?.productByHandle ?? [])
 
 
-const src = computed(() => product.value.images?.edges[0]?.node?.src ?? "");
+const src = computed(() => product.value.images?.edges[3]?.node?.src ?? "");
 const sizes = `(max-width: ${breakpointsTailwind.md}px) 95vw, 40vw`;
 const srcset = computed(() => getSrcset(src.value || ""));
 
