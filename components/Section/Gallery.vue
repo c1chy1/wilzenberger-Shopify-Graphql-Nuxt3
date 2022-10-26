@@ -1,11 +1,14 @@
 <template>
 
   <lightgallery
+      class="grid grid-rows-1 grid-cols-4"
                 :settings="{
     mobileSettings:{controls: true, showCloseIcon: true, download: true},
+    addClass: 'test',
     toggleThumb: true,
     allowMediaOverlap: true,
     selector: '.image',
+    startClass :	'lg-start-zoom',
     plugins: plugins,
     mode: 'lg-slide',
     cssEasing: 'ease',
@@ -47,19 +50,18 @@
     supportLegacyBrowser: true
   }"
   >
-    <div id="lightgallery" class="grid grid-rows-1 grid-cols-4 gap-2 w-full ">
+
       <a
-          v-for="(image , index) in images "
+          v-for="image in imagesArray.slice(1) "
           :key="product.handle"
-          :id="index"
+
           class="my-auto  hover:border hover:border-primary hover:transition-all hover:bg-primary hover:bg-opacity-70"
-          :href="image.node.src">
+          :data-src="image.node.src">
         <img
-            class="image "
+            class="image  cursor-pointer"
             :key="product.handle"
             :src="image.node.src"/>
       </a>
-    </div>
 
   </lightgallery>
 
@@ -70,7 +72,7 @@
 
 
 import {useQuery} from "@vue/apollo-composable";
-import {computed} from "vue";
+import {computed , ref ,reactive , Ref} from "vue";
 import Lightgallery from "lightgallery/vue/LightGalleryVue.umd.js";
 import lgZoom from "lightgallery/plugins/zoom/lg-zoom.umd.js";
 import lgFullscreen from "lightgallery/plugins/fullscreen/lg-fullscreen.umd.js";
@@ -92,12 +94,10 @@ const {result, loading, error} = useQuery(productByHandle, {
 });
 
 const product = computed(() => result.value?.productByHandle ?? [])
-
-
-
 const images = computed(() => result.value?.productByHandle.images.edges ?? [])
+const imagesArray = [...images.value]
 
-console.log(images.value)
+
 </script>
 
 <style scoped lang="scss">
@@ -186,12 +186,6 @@ console.log(images.value)
       opacity: 0;
     }
   }
-}
-
-#lightgallery a:first-child {
-
-  display: none !important;
-
 }
 
 
