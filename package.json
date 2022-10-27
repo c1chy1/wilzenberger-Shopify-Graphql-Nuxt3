@@ -27,7 +27,6 @@
     "@pinia/nuxt": "^0.4.2",
     "@shopify/theme-images": "^4.1.1",
     "@tailwindcss/forms": "^0.5.3",
-    "glightbox": "^3.2.0",
     "graphql": "^16.5.0",
     "graphql-tag": "^2.12.6",
     "gsap": "npm:@gsap/business@^3.11.1",

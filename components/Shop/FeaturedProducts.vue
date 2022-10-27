@@ -34,6 +34,7 @@ const props = defineProps<{
 
 const numProducts = props.numProducts;
 
+
 const { result, error } = useQuery(products, {
 
   numProducts

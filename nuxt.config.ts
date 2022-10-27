@@ -3,8 +3,8 @@ import {defineNuxtConfig} from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-        target: 'static',
-        mode: "universal",
+    /*    target: 'static',
+        mode: "universal",*/
     ssr: false,
     pwa: {
         workbox: {
@@ -37,8 +37,8 @@ export default defineNuxtConfig({
 
 
     modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge'],
-    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss' ],
-    plugins: ['plugins/apollo', 'plugins/scrollToTop', 'plugins/lightgallery'],
+    buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
+    plugins: ['plugins/apollo', 'plugins/scrollToTop'],
 
 
     icon: {
@@ -56,6 +56,7 @@ export default defineNuxtConfig({
             {name: 'background_color', content: '#8BA039'}
         ],
         link: [
+
             {hid: 'icon', rel: 'icon', type: 'image/png', href: '/icon.png'},
             {hid: 'apple-touch-icon', rel: 'apple-touch-icon', href: 'icons/192x192.png'},
         ],

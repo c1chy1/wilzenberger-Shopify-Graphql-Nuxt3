@@ -84,11 +84,11 @@
             </div>
 
           </div>
-          <client-only>
+
           <SectionGallery
-              :gallery="product"
+          :images="images"
           />
-          </client-only>
+
         </section>
         <section class="flex flex-col mt-12 xl:flex-row px-4 mt-4 md:w-5/6 xl:max-w-6xl mx-auto">
           <SectionTabs/>
@@ -126,6 +126,7 @@ import {useQuery} from "@vue/apollo-composable";
 import {productByHandle} from "~/apollo/queries/productByHandle";
 import {breakpointsTailwind} from "@vueuse/core";
 import {getSrcset} from "~/utilities/images";
+import {computed} from "vue";
 
 
 const route = useRoute();
@@ -134,6 +135,9 @@ const handle = route.params.product;
 const {result, loading, error} = useQuery(productByHandle, {handle});
 
 const product = computed(() => result.value?.productByHandle ?? [])
+
+
+const images = computed(() => result.value?.productByHandle.images.edges ?? [])
 
 
 const src = computed(() => product.value.images?.edges[3]?.node?.src ?? "");
