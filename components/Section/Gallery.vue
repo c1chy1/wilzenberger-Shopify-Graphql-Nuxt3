@@ -48,8 +48,7 @@
     dynamic: false,
     dynamicEl: [],
     galleryId: 1,
-    supportLegacyBrowser: true,
-          licenseKey: '2DEA3099-C874430F-B16929BD-5D4F6E7A',
+    supportLegacyBrowser: true
         }"
 
         >
