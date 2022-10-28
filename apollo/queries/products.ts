@@ -14,6 +14,8 @@ export const products = gql`
                         edges {
                             node {
                                 src
+                                width
+                                height
                             }
                         }
                     }

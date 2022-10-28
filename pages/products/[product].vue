@@ -86,7 +86,7 @@
           </div>
 
           <SectionGallery
-          :images="images"
+              :images="images"
           />
 
         </section>
@@ -135,7 +135,6 @@ const handle = route.params.product;
 const {result, loading, error} = useQuery(productByHandle, {handle});
 
 const product = computed(() => result.value?.productByHandle ?? [])
-
 
 const images = computed(() => result.value?.productByHandle.images.edges ?? [])
 

@@ -10,8 +10,9 @@
     </div>
     <div class="middle-right-slide fixed">
       <div class="inner-container-middle">
-        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center" to="/produkte">
-          Produkte
+
+        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center"
+                  to="/herstellung">Herstellung
         </NuxtLink>
       </div>
     </div>
@@ -26,16 +27,17 @@
 
     <div class="top-left-slide fixed">
       <div class="inner-container-left-top">
-        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center" to="/kontakt">
-          Kontakt
+
+        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center" to="/produkte">
+          Produkte
         </NuxtLink>
       </div>
     </div>
     <div class="bottom-left-slide fixed">
       <div class="inner-container-left-bottom">
 
-        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center"
-                  to="/herstellung">Herstellung
+        <NuxtLink class="hover:text-bs-red nav-links w-full h-[20vh] flex justify-center items-center" to="/kontakt">
+          Kontakt
         </NuxtLink>
       </div>
 

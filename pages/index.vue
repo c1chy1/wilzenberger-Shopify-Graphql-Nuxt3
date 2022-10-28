@@ -4,7 +4,7 @@
     <BasicSeoHead
         title="Wilzenberger"
         description="Wilzenberger"/>
-    <LayoutHeader bg-image="/images/home_wilzenberger-bg-header.png">
+    <LayoutHeader>
       <h1
           class="uppercase text-center  text-4xl md:text-5xl xl:text-7xl text-primary w-full m-auto leading-none ">Das
         Beste <br> aus der natur
@@ -16,8 +16,7 @@
 
 
     <SectionAbout>
-
-      <AnimationSun/>
+     <AnimationSun/>
 
       <h2 class=" font-serif   text-center text-3xl md:text-4xl  xl:text-6xl text-tertiary w-full font-bold  leading-none ">
         Das Beste
@@ -39,7 +38,6 @@
         class="z-50"
         :num-products="4"
         bg-image=""
-        :number="4"
     />
     <section class="bg-[#F9F9F9]">
       <div class="text-center pt-14">

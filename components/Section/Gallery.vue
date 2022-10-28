@@ -78,8 +78,6 @@
 <script setup lang="ts">
 
 
-
-
 import {useQuery} from "@vue/apollo-composable";
 import Lightgallery from "lightgallery/vue/LightGalleryVue.umd.js";
 import lgZoom from "lightgallery/plugins/zoom/lg-zoom.umd.js";
