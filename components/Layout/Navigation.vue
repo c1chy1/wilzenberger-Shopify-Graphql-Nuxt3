@@ -4,7 +4,7 @@
        :style="`background-image: url(${props.bgImage});`"
   >
     <ul
-        class="xl:w-3/5 mx-auto flex justify-around space-x-6 items-center text-secondary text-base xl:text-xl uppercase font-bold"
+        class=" xl:w-3/5 mx-auto flex justify-around space-x-6 items-center text-secondary text-base xl:text-xl uppercase font-bold"
     >
       <li class="xl:pr-48 logo" >
         <NuxtLink to="/">
@@ -17,11 +17,16 @@
       </li>
 
 
-      <li id="nav" :key="item.label" v-for="item of ids">
-        <NuxtLink  class=" transition-all hover:text-tertiary" :to="item.route">{{ item.label }}
+      <li id="nav"  :key="item.label" v-for="(item, index) of ids"
+
+      class="animate__animated animate__bounceInRight "
+      :class="`animate__delay-${index+8}s`"
+      >
+        <NuxtLink
+
+            class=" transition-all hover:text-tertiary" :to="item.route">{{ item.label }}
         </NuxtLink>
       </li>
-
       <li>
         <ShopProductSearch/>
      </li>
@@ -41,7 +46,10 @@ interface Props {
 
 }
 
+
 const props = defineProps<Props>()
+
+
 
 
 </script>

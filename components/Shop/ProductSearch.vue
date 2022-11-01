@@ -42,6 +42,7 @@ import {useQuery} from "@vue/apollo-composable";
 import {products} from "~/apollo/queries/products";
 import {computed} from "vue";
 
+
 let query = ref([]);
 
 

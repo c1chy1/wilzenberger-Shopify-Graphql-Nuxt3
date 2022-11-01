@@ -1,13 +1,6 @@
 <template>
   <section>
 
-    <LayoutHeader>
-
-      <h1 class="uppercase text-center  text-4xl md:text-5xl xl:text-7xl text-primary w-full m-auto leading-none ">Unsere Produkte <br>
-      </h1>
-      <p class="uppercase text-center 2xl:text-2xl text-secondary w-full m-auto leading-tight ">Lorem ipsum dolor sit amet,
-        <br> consetetur sadipscining.</p>
-    </LayoutHeader>
 
       <SectionProducts
 

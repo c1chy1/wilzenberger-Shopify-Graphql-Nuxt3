@@ -1,21 +1,24 @@
 <template>
   <div class="absolute w-full h-full hidden lg:block " >
-    <svg id="svg" class="m-auto lg:h-[83rem] w-full" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 620 550">
-      <path class="theLine opacity-20"
+    <svg
+
+        id="svg" class="m-auto lg:h-[83rem] w-full" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 620 550">
+      <path
+          class="theLine opacity-20"
             d="M 0 0
             C 200 150 950 50 350 150
             C -350 450 200 665 585 470
          " fill="none" stroke="gold" stroke-width="6px" />
     </svg>
 
-
-    <svg class="ball ball01 w-32 h-52 z-10" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr" id="svg2" viewBox="0 0 325.44 325.44" version="1.0" inkscape:version="0.91 r13725">
+    <svg
+        class="ball ball01 w-32 h-52 z-10"  id="svg2" viewBox="0 0 325.44 325.44" version="1.0">
       <defs id="defs4">
         <filter id="filter2797">
-          <feGaussianBlur id="feGaussianBlur2799" stdDeviation="18.047757" inkscape:collect="always"/>
+          <feGaussianBlur id="feGaussianBlur2799" stdDeviation="18.047757" />
         </filter>
         <filter id="filter3198">
-          <feGaussianBlur id="feGaussianBlur3200" stdDeviation="8.5814285" inkscape:collect="always"/>
+          <feGaussianBlur id="feGaussianBlur3200" stdDeviation="8.5814285"/>
         </filter>
         <radialGradient id="radialGradient3203" gradientUnits="userSpaceOnUse" cy="478.08" cx="325.71" gradientTransform="matrix(1 0 0 .94811 26 10.807)" r="440.5">
           <stop id="stop3186" style="stop-color:#ffea00" offset="0"/>
@@ -31,7 +34,7 @@
           <stop id="stop3606" style="stop-color:#ffffff;stop-opacity:0" offset="1"/>
         </linearGradient>
         <filter id="filter3672">
-          <feGaussianBlur id="feGaussianBlur3674" stdDeviation="6.6987856" inkscape:collect="always"/>
+          <feGaussianBlur id="feGaussianBlur3674" stdDeviation="6.6987856" />
         </filter>
       </defs>
       <g id="layer1" transform="matrix(.36391 0 0 .36391 34.208 -.44373)">
@@ -39,64 +42,24 @@
         <path id="path2176" style="stroke-linejoin:round;fill-rule:evenodd;filter:url(#filter3672);stroke:#f6c600;stroke-width:12.3;fill:url(#radialGradient3592)" d="m562.86 459.51c0 120.71-96.58 218.57-215.72 218.57-119.13 0-215.71-97.86-215.71-218.57 0-120.72 96.58-218.58 215.71-218.58 119.14 0 215.72 97.86 215.72 218.58z"/>
         <path id="path3596" style="filter:url(#filter2797);fill-rule:evenodd;fill:url(#linearGradient3600)" d="m562.86 459.51c0 120.71-96.58 218.57-215.72 218.57-119.13 0-215.71-97.86-215.71-218.57 0-120.72 96.58-218.58 215.71-218.58 119.14 0 215.72 97.86 215.72 218.58z" transform="matrix(.70790 0 0 .44374 97.116 147.03)"/>
       </g>
-      <metadata>
-        <rdf:RDF>
-          <cc:Work>
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-            <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
-            <dc:publisher>
-              <cc:Agent rdf:about="http://openclipart.org/">
-                <dc:title>Openclipart</dc:title>
-              </cc:Agent>
-            </dc:publisher>
-            <dc:title>Sol</dc:title>
-            <dc:date>2007-07-18T17:04:13</dc:date>
-            <dc:description>Sol Amarillo tipo cartoon</dc:description>
-            <dc:source>https://openclipart.org/detail/4467/sol-by-egonpin</dc:source>
-            <dc:creator>
-              <cc:Agent>
-                <dc:title>egonpin</dc:title>
-              </cc:Agent>
-            </dc:creator>
-            <dc:subject>
-              <rdf:Bag>
-                <rdf:li>astronomy</rdf:li>
-                <rdf:li>cartoon</rdf:li>
-                <rdf:li>how i did it</rdf:li>
-                <rdf:li>sun</rdf:li>
-                <rdf:li>yellow</rdf:li>
-              </rdf:Bag>
-            </dc:subject>
-          </cc:Work>
-          <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
-            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
-            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
-          </cc:License>
-        </rdf:RDF>
-      </metadata>
     </svg>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { gsap } from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin"
 
-import {onMounted} from 'vue'
+import {onMounted , onUnmounted, ref} from 'vue'
 if (process.client) {
   gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger, MotionPathPlugin)
 }
-
 const tl = gsap.timeline();
 
+
 onMounted(() => {
-
-
-
   gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
   gsap.defaults({ease: "none"});
 
@@ -110,9 +73,9 @@ onMounted(() => {
       end: "bottom center"
     }
   })
-      .to(".ball01", {duration: 0.01, autoAlpha: 1})
-      .from(".theLine", {drawSVG: 0}, 0)
-      .to(".ball01", {
+      .set('.ball01', {duration: 0.01, autoAlpha: 1})
+      .from('.theLine', {drawSVG: 0}, 0)
+      .to('.ball01', {
         motionPath: {
           path: ".theLine",
           align: ".theLine",
@@ -120,6 +83,14 @@ onMounted(() => {
         }
       }, 0)
 
+
 });
 
+
+
+onUnmounted(() => {
+
+  ScrollTrigger.refresh(true)
+
+});
 </script>

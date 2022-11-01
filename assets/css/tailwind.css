@@ -8,10 +8,8 @@
 
     body {
 
-        @apply font-sans
-
+        @apply font-sans overflow-x-hidden
     }
-
     h1 {
         @apply pb-4 md:text-lg xl:text-5xl font-bold text-center
     }

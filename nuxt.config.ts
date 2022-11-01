@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         }
 
     },
-    css: ['~/assets/css/main.css','lightgallery/css/lightgallery.css'],
+    css: ['~/assets/css/main.css','lightgallery/css/lightgallery.css','animate.css/animate.min.css'],
     build: {
         postcss: {
             postcssOptions: require('./postcss.config.js'),

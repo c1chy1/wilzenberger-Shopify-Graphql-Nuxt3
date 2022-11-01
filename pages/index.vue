@@ -6,7 +6,7 @@
         description="Wilzenberger"/>
     <LayoutHeader>
       <h1
-          class="uppercase text-center  text-4xl md:text-5xl xl:text-7xl text-primary w-full m-auto leading-none ">Das
+          class="animate__animated animate__heartBeat animate__repeat-2 animate__delay-15s  uppercase text-center text-4xl md:text-5xl xl:text-7xl text-primary w-full m-auto leading-none animate__delay-5s animate__animated animate__wobble ">Das
         Beste <br> aus der natur
       </h1>
       <p class="uppercase text-center 2xl:text-2xl text-secondary w-full m-auto leading-tight ">Lorem ipsum dolor sit
@@ -14,11 +14,41 @@
         <br> consetetur sadipscining.</p>
     </LayoutHeader>
 
+    <div
 
+    >
+
+      <h1 class="animate__animated animate__wobble">TEST</h1>
+
+
+      <button  @click="display = !display">display</button>
+
+
+     <transition name="demo" :css="false" appear
+
+              @leave="leave"
+                 @before-enter='beforeEnter'
+                 @enter='enter'
+                 @appear='appear'
+
+     >
+      <h1 v-if="display" >transition classes</h1>
+     </transition>
+
+
+      <div>
+
+        <input id="test" v-model.number="num" type="number">
+        <h1 >{{tweenedNum}}</h1>
+      </div>
+    </div>
+
+
+
+    <AnimationSun/>
     <SectionAbout>
-     <AnimationSun/>
 
-      <h2 class=" font-serif   text-center text-3xl md:text-4xl  xl:text-6xl text-tertiary w-full font-bold  leading-none ">
+      <h2 class=" font-serif text-center text-3xl md:text-4xl  xl:text-6xl text-tertiary w-full font-bold  leading-none ">
         Das Beste
         aus dem Sauerland!</h2>
 
@@ -348,5 +378,261 @@
   </section>
 </template>
 
+<script setup lang="ts">
 
 
+import gsap from 'gsap'
+import vue from 'vue'
+
+import {ref} from 'vue'
+
+const display = ref(false)
+
+const num = ref(0)
+const tweenedNum = 0
+
+
+watch(num, (newValue, oldValue) => {
+
+  gsap.to('#test', {
+
+    duration:5,
+    ease:'none',
+    tweenedNum: newValue
+
+  })
+})
+
+function onClick() {
+
+  console.log("Clicked");
+
+
+}
+
+
+
+function animation() {
+  display.value = true
+
+}
+function beforeEnter(el) {
+
+  console.log(el)
+  console.log('beforeEnter')
+
+  gsap.set(el, {
+
+    opacity:0,
+    scale:0
+
+  })
+}
+
+function enter(el , done) {
+
+  console.log(el)
+  console.log('enter')
+
+/*
+  setTimeout(()=>{
+    done()
+  }, 3000)
+*/
+
+  gsap.to(el, {
+
+    opacity:1,
+    scale:1,
+    duration:1,
+    onComplete:done
+  })
+
+}
+
+function afterEnter(el) {
+
+  console.log(el)
+  console.log('afterEnter')
+}
+
+function enterCancelled(el) {
+
+  console.log(el)
+  console.log('enterCancelled')
+
+}
+
+function leave(el, done) {
+
+  console.log(el)
+  console.log('enterCancelled')
+
+
+  gsap.to(el,{
+
+    opacity:0,
+    scale:0,
+    duration:1,
+    onComplete: done
+  })
+
+}
+
+function appear(el, done) {
+
+  console.log(el)
+  console.log('enterCancelled')
+
+
+  gsap.to(el,{
+
+  keyframes: [
+    {opacity:1,
+      scale: 1.2,
+    duration:0.8}, {
+
+    opacity: 1,
+      scale: 1,
+      duration:0.6,
+      onComplete: done
+    }
+
+  ]
+  })
+
+}
+
+
+
+
+</script>
+
+<style>
+
+
+
+.appearFrom{
+
+  transform:scale(1.25);
+  background: blue;
+
+}
+
+.appearTo {
+
+  transform: scale(0.5);
+  background: green;
+
+}
+
+.appearActive {
+
+  transition: all 3s ease;
+
+}
+.animate__animated.animate__backOutDown {
+  --animate-duration: 3s;
+
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: 3s;
+
+}
+
+
+.animation-enter-active {
+ animation: pop 5s;
+
+}
+
+
+.animation-leave-active {
+  animation: pop 5s reverse;
+
+}
+
+
+.demo-enter-from {
+
+  opacity: 0; transform: scale(0);
+}
+.demo-enter-active {
+  transition: 2s all ease;
+
+}
+
+/*
+.demo-enter-to {
+
+  background: green;
+}
+
+.demo-leave-from {
+  background: black;
+
+}
+*/
+
+.demo-leave-active {
+  transition: 2s all ease;
+
+}
+
+.demo-leave-to {
+
+  opacity: 0; transform: scale(0);
+}
+
+
+
+.initialStyle {
+
+  width: 200px;
+  height: 200px;
+  background: green;
+  transition: all 2s ease;
+
+}
+
+.newStyle {
+
+  background: red;
+  transform: translateX(300px) translateY(300px) rotate(720deg) scale(0.5);
+
+}
+
+.animate {
+
+  animation: pop 3s;
+
+}
+
+@keyframes pop {
+
+
+  0% {
+
+     opacity: 0;
+    transform: scale(0);
+
+  }
+
+  50%{
+
+ opacity: 1;
+    transform: scale(1.25);
+
+  }
+  100% {
+
+    opacity: 1;
+    transform: scale(1);
+
+  }
+
+}
+
+
+</style>

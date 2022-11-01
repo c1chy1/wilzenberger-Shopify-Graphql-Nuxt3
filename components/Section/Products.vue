@@ -3,8 +3,13 @@
 
   <section class="section over-hide grid lg:grid-cols-4 grid-rows-1" >
 
-            <div class="card-3d-wrap h-[26rem] sm:h-[32rem] xl:h-[32rem] w-1/2 lg:w-3/4 mx-auto my-8 xl:my-16" v-for="(product, index) in collection.edges">
+            <div
+                :class="`animate__delay-${index+1}s`"
+                class="animate__animated animate__bounceInRight animate__fast  card-3d-wrap h-[26rem] sm:h-[32rem] xl:h-[32rem] w-1/2 lg:w-3/4 mx-auto my-8 xl:my-16"
+                v-for="(product, index) in collection.edges">
               <div class="card-3d-wrapper shadow-2xl">
+
+
                 <div class="card-back">
                   <div class="pricing-wrap">
                     <h4 class="mb-5 text-xs xl:text-lg">{{ product.node.handle }}</h4>
@@ -56,9 +61,6 @@
             </div>
           </section>
 
-
-
-
 </template>
 
 <script setup lang="ts">
@@ -67,6 +69,7 @@
 import {useQuery} from "@vue/apollo-composable";
 import {computed} from "vue";
 import {products} from "~/apollo/queries/products";
+import gsap from "gsap";
 
 const props = defineProps<{
   numProducts: number
@@ -80,7 +83,6 @@ const { result, error } = useQuery(products, {
   numProducts
 });
 const collection = computed(() => result.value?.products ?? [])
-
 
 
 

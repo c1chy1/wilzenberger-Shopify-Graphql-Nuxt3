@@ -3,7 +3,7 @@
 
 
 <section class="min-h-screen overflow-hidden">
-  <SectionPreloader/>
+<!--  <SectionPreloader/>-->
 
   <ShopCartIcon/>
   <transition-group name="cart" mode="out-in">
@@ -14,14 +14,14 @@
         bg-image="/images/navigation.png"
         class="hidden lg:block"
     />
-  <transition-group
-   name="page"
-   mode="out-in">
+
+
     <main key="main">
-    <slot></slot>
+      <slot></slot>
     </main>
-</transition-group>
     <LayoutFooter
     bg-image="/images/home_wilzenberger-bg-footer.png"/>
 </section>
 </template>
+
+
