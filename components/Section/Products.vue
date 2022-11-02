@@ -1,7 +1,7 @@
 <template>
 
 
-  <section class="section over-hide grid lg:grid-cols-4 grid-rows-1" >
+  <section class="section over-hide h-screen grid lg:grid-cols-4 grid-rows-1" >
 
             <div
                 :class="`animate__delay-${index+1}s`"

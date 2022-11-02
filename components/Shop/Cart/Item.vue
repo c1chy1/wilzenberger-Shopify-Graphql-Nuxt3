@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-around py-1 xl:py-3 mx-4  -mb-[1px] space-x-5  xl:space-x-10  bg-primary bg-opacity-5  border border-primary relative z-10">
+
+
+  <li class=" max-w-xl flex justify-around py-1 xl:py-3 mx-4  -mb-[1px] space-x-5  xl:space-x-10  bg-primary bg-opacity-5  border border-primary relative z-10 ">
 
     <NuxtLink :to="productPath" class="border-b-primary">
     <div class="col-span-2 row-span-2">
@@ -89,7 +91,7 @@
     </div>
     </div>
 
-  </div>
+  </li>
 </template>
 
 <script setup lang="ts">

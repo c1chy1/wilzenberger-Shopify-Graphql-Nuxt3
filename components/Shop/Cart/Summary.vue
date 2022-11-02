@@ -3,6 +3,7 @@ import { useCart } from '@/stores/cart'
 </script>
 
 <template>
+
   <div class="grid gap-2 p-4 rounded-lg bg-primary bg-opacity-5">
     <h3 class="text-sm lg:text-lg font-medium">Bestellübersicht</h3>
     <div class="flex flex-col text-sm lg:text-lg">

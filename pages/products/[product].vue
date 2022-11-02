@@ -39,11 +39,11 @@
               :srcset="srcset"
               :width="product.images?.edges[0]?.node?.width ?? ''"
               :height="product.images?.edges[0]?.node?.height ?? ''"
-              class="w-full  border border-tertiary border-opacity-20 animate__animated animate__bounceInLeft"
+              class="w-full  border border-tertiary border-opacity-20 animate__animated animate__bounceInLeft animate__delay-1s"
           />
 
 
-          <div class=" xl:ml-0 animate__animated animate__bounceInRight">
+          <div class=" xl:ml-0 animate__animated animate__bounceInRight animate__delay-1s">
             <ShopProductTitle
                 tag="h2"
                 :title="product.title"
