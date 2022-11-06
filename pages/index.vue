@@ -21,12 +21,12 @@
         Das Beste
         aus dem Sauerland!</h2>
 
-      <img class="mx-auto my-2" src="/images/home_wilzenberger-line-about.png" alt="about">
-      <p class=" p-4 text-center w-10/12  text-secondary text-xs md:text-sm xl:text-base  xl:w-1/2  leading-tight mx-auto ">
+      <img class="mx-auto xl:my-2" src="/images/home_wilzenberger-line-about.png" alt="about">
+      <p class=" bg-[#F9F9F9] bg-opacity-30 rounded-full p-4 text-center w-10/12  text-secondary text-xs md:text-sm xl:text-base  xl:w-1/2  leading-tight mx-auto ">
         Lorem ipsum dolor sit amet, consetetur
         sadipscining.Lorem ipsum dolor sit amet, consetetur sadipscining.Lorem ipsum dolor sit amet, consetetur
         sadipscining.Lorem ipsum dolor sit amet, consetetur sadipscining.Lorem ipsum dolor sit amet, consetetur
-        sadipscining.Lorem ipsum dolor sit amet, consetetur sadipscining.
+
       </p>
     </SectionAbout>
 
