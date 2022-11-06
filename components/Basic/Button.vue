@@ -1,7 +1,7 @@
 <template>
   <component
       :is="props.tag"
-      class="inline-flex justify-center items-center text-sm lg:text-base text-center transition group"
+      class="inline-flex justify-center items-center text-xs sm:text-sm lg:text-base text-center transition group"
       :class="buttonClasses"
   >
     <slot name="before"></slot>

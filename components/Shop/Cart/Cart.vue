@@ -1,6 +1,6 @@
 <template>
 
-  <section>
+
     <transition-group name="slide" :duration="500" mode="in-out">
       <div key="cart" id="cart" v-show="cartStore.cartOpen"
 
@@ -17,7 +17,7 @@
         <ShopCartSummary class="col-span-4 lg:col-span-4 xl:col-span-5" key="5"/>
       </div>
     </transition-group>
-  </section>
+
 </template>
 
 <script setup lang="ts">

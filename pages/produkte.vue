@@ -1,15 +1,9 @@
 <template>
-  <section>
-
-
-      <SectionProducts
+  <SectionProducts
 
          :num-products="5"
-          bg-image="/images/home_wilzenberger-bg-footer.png"
-     />
+          bg-image="/images/home_wilzenberger-bg-footer.png"/>
 
-
-  </section>
 </template>
 
 <script setup lang="ts">

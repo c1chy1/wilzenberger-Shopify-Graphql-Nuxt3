@@ -1,11 +1,11 @@
 <template>
 
 
-  <section class="section over-hide h-screen grid lg:grid-cols-4 grid-rows-1" >
+  <section class="section over-hide  xl:h-screen grid lg:grid-cols-4 grid-rows-1" >
 
             <div
                 :class="`animate__delay-${index+1}s`"
-                class="animate__animated animate__bounceInRight animate__fast  card-3d-wrap h-[26rem] sm:h-[32rem] xl:h-[32rem] w-1/2 lg:w-3/4 mx-auto my-8 xl:my-16"
+                class="animate__animated animate__bounceInRight animate__fast  card-3d-wrap h-[26rem] sm:h-[32rem] xl:h-[32rem] w-3/4 sm:w-1/2 lg:w-3/4 mx-auto my-8 xl:my-16"
                 v-for="(product, index) in collection.edges">
               <div class="card-3d-wrapper shadow-2xl">
 
@@ -113,7 +113,7 @@ a:hover {
 .section{
   position: relative;
   width: 100%;
-  z-index: 1;
+
 }
 .full-height{
   min-height: 100vh;
@@ -224,7 +224,7 @@ a:hover {
   padding-top: 160px;
   width: 100%;
   display: block;
-  z-index: 1;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -340,7 +340,6 @@ a:hover {
   display: block;
   left: 0;
   top: 0;
-  z-index: 1;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   overflow: hidden;
@@ -356,7 +355,6 @@ a:hover {
   left: -35px;
   top: -40px;
 
-  z-index: 5;
   opacity: 0;
   transform: translate3d(0, 0, 45px) perspective(100px) scale(0.5);
   pointer-events: none;
@@ -376,7 +374,6 @@ a:hover {
   display: block;
   right: -70px;
   top: -50px;
-  z-index: 6;
   width: calc(50% + 35px);
   transform: translate3d(0, 0, 35px) perspective(100px) scale(0.5) rotate(0deg);
   opacity: 0;
@@ -395,7 +392,6 @@ a:hover {
   display: block;
   right: -20px;
   bottom: -135px;
-  z-index: 5;
   width: calc(20% + 75px);
   transform: translate3d(0, 0, 25px) perspective(100px) scale(1);
   opacity: 0;
