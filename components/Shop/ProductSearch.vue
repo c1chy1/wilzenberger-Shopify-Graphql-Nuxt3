@@ -1,11 +1,11 @@
 <template>
   <div class="flex">
-    <div class="search-box">
+    <div class="search-box ">
       <button class="btn-search">
         <i class="fas fa-search"></i>
 
    <IconBasic
-       class="fill-tertiary xl:w-2/3"
+       class="fill-tertiary w-8 xl:w-2/3"
    image-link="/public/icons/search-icon.svg"
        alt="search button"
    />
@@ -14,36 +14,115 @@
           ref="search"
           type="search"
           placeholder="Search"
-          v-model="query"
-          class="input-search uppercase border-none focus:ring-0 cursor-pointer transition-all hover:fill-primary" >
+          v-model="searchTerm"
+          class="input-search  border-none focus:ring-0 cursor-pointer transition-all hover:fill-primary" >
     </div>
 
-    <transition name="fade">
-    <div v-if="query.length > 1" >
+
+        <template v-if="searchTerm">
+
+        <div class="gap-6 p-6 flex items-end absolute top-12  xl:top-0 right-2">
     <ShopProductSearchItem
 
-        v-for="(product, index) in collection.edges"
+        v-for="(product, index) in collection"
         :index="index"
-        :key="product.node.handle"
-        :product="product.node"
-        class="absolute  right-14 top-0 z-50"/>
+        :key="product.id"
+        :product="product"
+        class="lg:w-32 z-50 "/>
     </div>
 
-    <div v-else></div>
-    </transition>
+        </template>
+
 
   </div>
 
 </template>
 
 <script setup lang="ts">
+import { useRouteQuery } from '@vueuse/router'
 
 import {useQuery} from "@vue/apollo-composable";
+
 import {products} from "~/apollo/queries/products";
+import type {
+    ProductConnection,
+} from '@/types/search'
+
 import {computed} from "vue";
 
+const numProducts = 5
 
-let query = ref([]);
+const searchTerm = useRouteQuery('q', null, {
+    mode: 'replace',
+    route: useRoute(),
+    router: useRouter(),
+})
+
+
+/*
+interface SearchReturn {
+    products: ProductConnection
+}
+*/
+
+const titleQueryString = computed(() => searchTerm.value ? `title:${searchTerm.value}*` : null)
+
+const variables = computed(() => ({
+    first: 40,
+    query: titleQueryString.value,
+    reverse: true,
+}))
+
+
+const {
+    result,
+    loading,
+    refetch,
+    fetchMore,
+} = useQuery(products, {
+    numProducts ,
+    ...variables.value
+});
+
+
+const collection = computed(() => result.value?.products?.edges?.map(edge => edge.node) || [])
+
+
+
+
+console.log(result)
+
+console.log(products)
+
+const searchLoading = ref(false)
+watchDebounced(searchTerm, async (newVal, oldVal) => {
+
+    if (newVal !== oldVal) {
+        if (newVal !== '') {
+            searchLoading.value = true
+            await refetch({ ...variables.value })?.then(() => {
+                searchLoading.value = false
+
+                console.log(newVal)
+                console.log(variables.value)
+            })
+        }
+    }
+}, {
+    debounce: 650,
+})
+
+
+watch(searchTerm , (currentValue, oldValue) => {
+    console.log(currentValue);
+    console.log(oldValue);
+    console.log(searchTerm)
+});
+
+
+
+/*
+let query = ref('');
 
 
 
@@ -58,11 +137,19 @@ const { result, error } = useQuery(products, {
 const collection = computed(() => result.value?.products ?? [])
 
 
+console.log(collection)
+
+const state = reactive({
+    collection: []
+})
+
+
+
 watch(query , (currentValue, oldValue) => {
   console.log(currentValue);
     console.log(oldValue);
     console.log(query.value)
-  });
+  });*/
 
 </script>
 <style scoped>
@@ -73,6 +160,7 @@ watch(query , (currentValue, oldValue) => {
   position: relative;
   padding-right: 2rem;
   outline: none;
+
 }
 .input-search{
   margin-right: 2rem;
@@ -129,10 +217,6 @@ watch(query , (currentValue, oldValue) => {
 
 }
 
-.btn-search:hover:before {
-  transition: all 0.3s;
-  width: 100%;
-}
 
 .btn-search a {
   position: relative;

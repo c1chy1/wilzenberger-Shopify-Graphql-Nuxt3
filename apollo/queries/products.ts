@@ -19,20 +19,14 @@ export const products = gql`
                             }
                         }
                     }
-
-                    
                     totalInventory
                     title
                     description
                     handle
-
-
                     options(first: 2) {
-
                         name
                         values
                     }
-
                     priceRange {
                         maxVariantPrice {
                             amount

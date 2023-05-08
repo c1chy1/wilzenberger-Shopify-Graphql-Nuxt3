@@ -69,7 +69,7 @@
 import {useQuery} from "@vue/apollo-composable";
 import {computed} from "vue";
 import {products} from "~/apollo/queries/products";
-import gsap from "gsap";
+
 
 const props = defineProps<{
   numProducts: number

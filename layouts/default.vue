@@ -1,9 +1,6 @@
 <template>
-
-
-
-<section class="min-h-screen overflow-hidden">
-  <SectionPreloader/>
+  <section class="min-h-screen overflow-hidden">
+<!--  <SectionPreloader/>-->
 
   <ShopCartIcon/>
   <transition-group name="cart" mode="out-in">

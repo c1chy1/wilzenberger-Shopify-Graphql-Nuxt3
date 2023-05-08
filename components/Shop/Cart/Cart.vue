@@ -9,13 +9,15 @@
         <ShopCartHeader key="2"
         />
 
-
+<transition name="fade">
         <ShopCartItems
               key="4"
               class=""
               :items="lineItems"/>
+</transition>
         <ShopCartSummary class="col-span-4 lg:col-span-4 xl:col-span-5" key="5"/>
       </div>
+
     </transition-group>
 
 </template>

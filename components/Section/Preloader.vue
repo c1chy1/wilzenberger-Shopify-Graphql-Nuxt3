@@ -1,6 +1,6 @@
 <template>
   <div
-
+          v-if="!active"
       id="preloader"
       class="fixed min-h-screen w-full bg-[#8DA23C] z-50 overflow-hidden">
     <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto my-auto wilzen hidden lg:block"
@@ -182,6 +182,10 @@
 import {gsap} from "gsap";
 import {DrawSVGPlugin} from 'gsap/DrawSVGPlugin'
 import {onMounted} from "#imports";
+import {looseIndexOf} from "@vue/shared";
+
+
+let active = ref(false)
 
 gsap.registerPlugin(DrawSVGPlugin);
 const TL = gsap.timeline()
@@ -190,13 +194,28 @@ const TL = gsap.timeline()
 const route = useRoute()
 
 
+
+function end() {
+
+    active.value = true
+
+}
+
+
 onMounted( async () => {
 
 
 
   if(route.fullPath === "/") {
 
-    TL.fromTo("path.white", {
+
+    TL.set('body', {
+        overflowY: 'hidden',
+
+    })
+
+
+        .fromTo("path.white", {
       drawSVG: "0%"}, {
       duration: 1,
       delay:1.5,
@@ -218,22 +237,22 @@ onMounted( async () => {
       transition: 'all',
     width: 0,
     height: 0,
-    })
+    }).set('body', {
+      overflowY: 'auto',
+      overflowX: 'hidden'
+  })
+
+      setTimeout(end, 10000)
 
   } else {
 
-    TL.to(['#preloader', '.wilzen'], {
-   display: 'none',
-      height: 0,
-      width: 0
-    })
+    active.value = false
+
 
   }
 
 
 });
-
-
 
 
 </script>

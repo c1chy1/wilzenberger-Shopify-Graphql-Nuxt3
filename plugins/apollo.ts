@@ -12,10 +12,10 @@ import { defineNuxtPlugin, NuxtApp } from "#app";
 export default defineNuxtPlugin((nuxtApp: NuxtApp) => {
     const httpLink = createHttpLink({
         credentials: "omit",
-        uri: "https://01c1b1.myshopify.com/api/2022-07/graphql.json",
+        uri: "https://wilzenberger-test.myshopify.com/api/2022-07/graphql.json",
         headers: {
             "X-Shopify-Storefront-Access-Token":
-            "cb5c9e6ae7cc5161f321387a21daf4cd",
+            "b8146d19c0dc5fc8e85c346ccb7cae0d",
         },
     });
 
