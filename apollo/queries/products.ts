@@ -13,7 +13,7 @@ export const products = gql`
                     images(first: 5) {
                         edges {
                             node {
-                                src
+                                url
                                 width
                                 height
                             }
@@ -47,7 +47,11 @@ export const products = gql`
                                     quantityValue
                                 }
                                 availableForSale
-                                price
+                                price {
+
+                                    amount
+                                    
+                                }
                                 title
                                 weight
                                 weightUnit

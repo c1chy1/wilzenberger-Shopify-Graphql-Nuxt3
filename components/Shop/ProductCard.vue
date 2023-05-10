@@ -2,6 +2,8 @@
   <article class="text-center">
     <NuxtLink :to="productPath" class="border-b-primary">
     <ShopProductImage
+
+
           :alt="product.handle"
           :height="height"
           :lazy="index > lazyLoadingThreshold"
@@ -61,11 +63,14 @@ const props = defineProps<{
 const productPath = `/products/${props.product.handle}`;
 
 
+
+
+
 const lazyLoadingThreshold = 7;
-const src = props.product?.images?.edges[0]?.node?.src ?? "";
+const src = props.product?.images?.edges[0]?.node?.url ?? "";
 const width = props.product?.images?.edges[0]?.node?.width ?? "";
 const height = props.product?.images?.edges[0]?.node?.height ?? "";
 const sizes = `(max-width: ${breakpointsTailwind.md}px) 45vw, 100%`;
-const srcset = getSrcset(src);
+const srcset = getSrcset(src)+'?format=webp&';
 
 </script>

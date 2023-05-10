@@ -39,6 +39,11 @@ export default defineNuxtConfig({
     modules: ['@kevinmarrec/nuxt-pwa', '@nuxt/image-edge','@vueuse/nuxt'],
     buildModules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
     plugins: ['plugins/apollo', 'plugins/scrollToTop'],
+    image: {
+        shopify: {
+            baseURL: 'https://cdn.shopify.com',
+        },
+    },
 
 
     icon: {

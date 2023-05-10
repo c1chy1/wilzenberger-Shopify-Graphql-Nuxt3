@@ -39,10 +39,11 @@
 
                       <ShopProductImage
 
-                          :srcset="product.node?.images?.edges[0].node?.src"
+                              loading="lazy"
+                          :srcset="product.node?.images?.edges[0].node?.url"
                           :id="product.node.id"
                           :alt="product.handle"
-                          :src="product.node?.images?.edges[0].node?.src"
+                          :src="product.node?.images?.edges[0].node?.url"
                           :width="product.node?.images?.edges[0].node?.width ?? ''"
                           :height="product.node?.images?.edges[0].node?.height ?? ''"
                           class="w-full drop-shadow-xl"

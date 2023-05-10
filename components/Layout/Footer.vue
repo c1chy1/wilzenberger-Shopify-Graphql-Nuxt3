@@ -97,7 +97,7 @@
 <div class="w-full border-t-2">
   <div class="xl:w-10/12 flex mx-auto text-xs xl:text-base flex justify-around">
 
-    <p class=" pl-1 py-2 xl:py-4">Copyright © 2022 by  <a href="https://www.c1chy.de" class="hover:text-tertiary transition-all">c1chy...</a></p>
+    <p class=" pl-1 py-2 xl:py-4">Copyright © 2023 by  <a href="https://www.c1chy.de" class="hover:text-tertiary transition-all">c1chy...</a></p>
 
     <div>
       <ul class="flex py-2 xl:py-4 uppercase  items-center font-semibold text-xs sm:text-sm">
