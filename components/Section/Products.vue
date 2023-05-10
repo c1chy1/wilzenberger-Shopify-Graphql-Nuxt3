@@ -51,10 +51,10 @@
 
                     </div>
                     <div class="img-wrap img-3">
-                      <img src="/public/images/Ivy.png" alt="">
+                      <img src="/images/Ivy.png" alt="">
                     </div>
                     <div class="img-wrap img-4">
-                      <img src="/public/images/IvyRock.png" alt="">
+                      <img src="/images/IvyRock.png" alt="">
                     </div>
                   </div>
                 </div>

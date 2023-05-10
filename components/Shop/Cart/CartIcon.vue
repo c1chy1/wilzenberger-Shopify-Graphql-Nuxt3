@@ -5,7 +5,7 @@
       @click="handleClick"
       @keyup.enter="handleClick"
   >
-    <img src="/public/icons/cart.png" alt="cart" class="relative rounded-b-2xl" >
+    <img src="/icons/cart.png" alt="cart" class="relative rounded-b-2xl" >
     <transition name="bounce">
 <span  v-if="cart.totalQuantity"
        class="bg-[#FCFCFD] px-1 text-xs rounded-full absolute left-6 top-2.5 transition-all">

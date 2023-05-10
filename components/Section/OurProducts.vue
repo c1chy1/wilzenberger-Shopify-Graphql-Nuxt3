@@ -30,7 +30,7 @@
           <li class="mb-4">
             <article class="flex items-center px-1">
 
-              <IconBasic image-link="public/icons/lactosefrei.png"
+              <IconBasic image-link="/icons/lactosefrei.png"
                          alt="lactosefrei"
               />
               <h4 class="ml-2 xl:ml-4 text-sm xl:text-xl uppercase font-semibold">Laktosefrei</h4>
@@ -43,7 +43,7 @@
           <li class="mb-4">
             <article class="flex items-center px-1">
 
-              <IconBasic image-link="public/icons/zuckerfrei.png"
+              <IconBasic image-link="/icons/zuckerfrei.png"
                          alt="zuckerfrei"
               />
               <h4 class="ml-2 xl:ml-4 text-sm xl:text-xl  uppercase font-semibold">Zuckerfrei</h4>
@@ -54,7 +54,7 @@
           </li>
           <li class="mb-4">
             <article class="flex items-center px-1">
-              <IconBasic image-link="public/icons/glutenfrei.png"
+              <IconBasic image-link="/icons/glutenfrei.png"
                          alt="glutenfrei"
               />
               <h4 class="ml-2 xl:ml-4 text-sm xl:text-xl  uppercase  font-semibold">Glutenfrei</h4>
@@ -74,7 +74,7 @@
         <ul>
           <li class="mb-4">
             <article class="flex flex-row-reverse items-center px-1">
-              <IconBasic image-link="public/icons/gen.png"
+              <IconBasic image-link="/icons/gen.png"
                          alt="Ohne Gentechnik"/>
 
               <h4 class="mr-2 xl:mr-4 text-sm xl:text-xl uppercase font-semibold">Ohne Gentechnik</h4>
@@ -86,7 +86,7 @@
 
           <li class="mb-4">
             <article class="flex flex-row-reverse items-center px-1">
-              <IconBasic image-link="public/icons/vegan.png"
+              <IconBasic image-link="/icons/vegan.png"
                          alt="Vegan"/>
 
               <h4 class="mr-2 xl:mr-4 text-sm xl:text-xl uppercase font-semibold">Vegan</h4>

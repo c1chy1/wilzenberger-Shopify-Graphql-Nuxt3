@@ -6,7 +6,7 @@
 
    <IconBasic
        class="fill-tertiary w-8 xl:w-2/3"
-   image-link="/public/icons/search-icon.svg"
+   image-link="/icons/search-icon.svg"
        alt="search button"
    />
       </button>

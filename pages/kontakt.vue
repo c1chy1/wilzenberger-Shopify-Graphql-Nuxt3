@@ -1,7 +1,7 @@
 <template>
   <section>
     <LayoutHeader
-        bg-image="/images/home_wilzenberger-bg-header.png"
+        bg-image="https://res.cloudinary.com/dy8wzssqw/image/upload/v1683744574/home_wilzenberger-bg-header_f055ns.png"
     >
 
       <h1 class="uppercase text-center  text-4xl md:text-5xl xl:text-7xl text-primary w-full m-auto leading-none ">Kontakt<br>

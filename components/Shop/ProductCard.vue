@@ -4,6 +4,7 @@
     <ShopProductImage
 
 
+            :src="srcset"
           :alt="product.handle"
           :height="height"
           :lazy="index > lazyLoadingThreshold"
@@ -71,6 +72,6 @@ const src = props.product?.images?.edges[0]?.node?.url ?? "";
 const width = props.product?.images?.edges[0]?.node?.width ?? "";
 const height = props.product?.images?.edges[0]?.node?.height ?? "";
 const sizes = `(max-width: ${breakpointsTailwind.md}px) 45vw, 100%`;
-const srcset = getSrcset(src)+'?format=webp&';
+const srcset = getSrcset(src);
 
 </script>

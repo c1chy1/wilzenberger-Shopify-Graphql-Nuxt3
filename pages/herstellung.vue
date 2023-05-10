@@ -11,6 +11,7 @@
         <br> consetetur sadipscining.</p>
     </LayoutHeader>
     <SectionAbout
+
         bg-image="/images/home_wilzenberger-bg-about.png"
 
     >
