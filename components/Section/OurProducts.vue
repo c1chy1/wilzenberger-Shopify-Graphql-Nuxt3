@@ -1,9 +1,18 @@
 <template>
 
   <section
-      class="w-full xl:bg-no-repeat  text-white text-center bg-cover px-1 lg:px-4 xl:px-6"
-      :style="`background-image: url(${props.bgImage});`">
+      class="w-full text-white text-center bg-cover"
+    >
 
+      <nuxt-img src="images/home_wilzenberger-products-bg.png"
+                loading="lazy"
+                format="webp"
+                quality="100"
+                class="object-cover absolute w-full  "
+
+      />
+
+<div class="sticky">
     <h3 class="uppercase  text-3xl xl:text-5xl font-semibold  pt-4 xl:pt-12">Unsere Produkte</h3>
     <div class="container max-w-6xl  flex justify-center items-center mx-auto">
       <div class="flex flex-col w-1/2">
@@ -68,7 +77,16 @@
 
       </div>
       <div class="w-1/2 hidden sm:block">
-        <img src="/images/home_wilzenberger-product.png" alt="product"/>
+
+          <nuxt-img
+                  alt="product"
+                  src="/images/home_wilzenberger-product.png"
+                    loading="lazy"
+                    format="webp"
+                    quality="75"
+                    class="object-cover   "
+          />
+
       </div>
       <div>
         <ul>
@@ -110,7 +128,7 @@
         </ul>
       </div>
     </div>
-
+</div>
   </section>
 
 
@@ -124,11 +142,6 @@ import {computed} from "vue";
 import {useProduct} from "~/stores/product";
 import {useCart} from "~/stores/cart";
 
-interface Props {
-  bgImage: string;
-
-}
-const props = defineProps<Props>()
 
 
 const {result, error} = useQuery(productByHandle, {

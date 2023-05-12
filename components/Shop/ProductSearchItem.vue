@@ -16,7 +16,7 @@
         :title="product.title"
         :id="product.handle"
         text-direction="center"
-        class="text-xl font-semibold"
+        class="text-xl font-semibold bg-[#FCFCFD] pt-3 bg-opacity-40 rounded-xl "
     />
 
   </article>
@@ -38,7 +38,7 @@ const productPath = `/products/${props.product.handle}`;
 
 
 const lazyLoadingThreshold = 7;
-const src = props.product?.images?.edges[0]?.node?.src ?? "";
+const src = props.product?.images?.edges[0]?.node?.url ?? "";
 const width = props.product?.images?.edges[0]?.node?.width ?? "";
 const height = props.product?.images?.edges[0]?.node?.height ?? "";
 const sizes = `(max-width: ${breakpointsTailwind.md}px) 45vw, 100%`;

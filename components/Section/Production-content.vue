@@ -4,9 +4,18 @@
       :class="props.direction === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'"
       class="flex flex-col w-full max-w-6xl py-12  mx-auto">
     <div class="lg:w-1/2 bg-no-repeat flex justify-center">
-      <img
-          :alt="`${props.alt}`"
-          :src="`${props.imageLink}`">
+
+
+
+        <nuxt-img
+                  :alt="`${props.alt}`"
+                  :src="`${props.imageLink}`"
+                  loading="lazy"
+                  format="webp"
+                  quality="75"
+                  class="object-cover "/>
+
+
     </div>
     <div  class=" lg:w-1/2 flex flex-col space-y-2 justify-center  ">
       <div class="p-6 mx-auto">

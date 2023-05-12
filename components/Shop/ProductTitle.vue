@@ -7,9 +7,11 @@
         v-if="props.title"
         :is="tag || 'div'"
         :class="[
+
+
       textDirection === 'left'   ? 'text-left' :
       textDirection === 'center' ? 'text-center' :
-      textDirection === 'right'  ? 'text-right' : '',]"
+      textDirection === 'right'  ? 'text-right' : '']"
     >{{ props.title }}
       <slot></slot>
 

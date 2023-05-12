@@ -1,17 +1,25 @@
 <template>
 
   <nav class="w-full flex md:flex relative bg-[length:100%_100%] bg-[right] z-[35]"
-       :style="`background-image: url(${props.bgImage});`"
   >
+
+
     <ul
         class=" xl:w-3/5 mx-auto flex justify-around space-x-6 items-center text-secondary text-base xl:text-xl uppercase font-bold"
     >
+        <nuxt-img src="/images/navigation.png"
+                  loading="lazy"
+                  format="webp"
+                  quality="75"
+                  class="object-cover absolute w-full"
+
+        ></nuxt-img>
       <li class="xl:pr-48 logo" >
         <NuxtLink to="/">
           <IconBasic
               image-link="/images/home_wilzenberger-logo.png"
-              alt="test"
-              class="md:w-2/3 xl:w-full"
+              alt="logo"
+              class="md:w-2/3 xl:w-full sticky"
           />
         </NuxtLink>
       </li>
@@ -40,15 +48,6 @@
 <script setup lang="ts">
 
 import {ids} from '~~/config/menu'
-
-interface Props {
-  bgImage: string;
-
-}
-
-
-const props = defineProps<Props>()
-
 
 
 

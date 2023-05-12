@@ -182,7 +182,6 @@
 import {gsap} from "gsap";
 import {DrawSVGPlugin} from 'gsap/DrawSVGPlugin'
 import {onMounted} from "#imports";
-import {looseIndexOf} from "@vue/shared";
 
 
 let active = ref(false)

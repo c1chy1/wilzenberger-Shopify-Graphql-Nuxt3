@@ -19,19 +19,20 @@
     </div>
 
 
-        <template v-if="searchTerm">
 
-        <div class="gap-6 p-6 flex items-end absolute top-12  xl:top-0 right-2">
+
+        <div      v-if="searchTerm" class="gap-6 p-6 flex items-end absolute top-12  xl:top-0 right-2">
     <ShopProductSearchItem
 
         v-for="(product, index) in collection"
         :index="index"
         :key="product.id"
         :product="product"
+        :class="searchTerm ? 'block' : 'hidden'"
         class="lg:w-32 z-50 "/>
     </div>
 
-        </template>
+
 
 
   </div>

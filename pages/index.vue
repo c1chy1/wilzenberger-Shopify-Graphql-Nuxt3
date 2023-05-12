@@ -39,7 +39,7 @@
     </SectionAbout>
 
     <SectionOurProducts
-        bg-image="images/home_wilzenberger-products-bg.png"
+
     />
 
     <ShopFeaturedProducts
